@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const design = {
   display: 'grid',
@@ -16,8 +17,9 @@ const Blog = ({ blog }) => {
       <article>
         <p>{id}</p>
         <p>{title}</p>
-        <p>{body}</p>
-      </article>
+        <p>{body.slice(0,100)}....</p>
+        <Link to={title}>Learn More</Link>
+        </article>
     </section>
   )
 }
