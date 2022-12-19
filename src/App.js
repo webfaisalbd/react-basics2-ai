@@ -1,10 +1,10 @@
 import './App.css';
-import Index from './routes/Index';
+import MemoPage from './MemoPage/MemoPage';
 
 
 const App = () => {
 
-  return <Index />;
+  return <MemoPage />;
 
 }
 export default App
