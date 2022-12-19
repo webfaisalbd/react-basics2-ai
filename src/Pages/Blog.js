@@ -1,26 +1,31 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
 
-const design = {
-  display: 'grid',
-  gridTemplateColumns: 'auto',
-  gridGap: "20px 50px",
-  backgroundColor: "#2196F3",
-  padding: "10px",
-  margin: "10px",
-}
+import { blogsData } from '../data';
 
-const Blog = ({ blog }) => {
-  const { id, title, body } = blog;
+const Blog = () => {
+  const {title} = useParams();
+  const navigate = useNavigate();
+
+  const [bodyData, setBodyData] = useState('');
+
+  useEffect(()=> {
+    const filtered = blogsData.filter(data => {
+      return data.title === title;
+    })
+    setBodyData(filtered[0]);
+  },[])
+
+  // console.log(bodyData);
+
   return (
-    <section style={design}>
-      <article>
-        <p>{id}</p>
-        <p>{title}</p>
-        <p>{body.slice(0,100)}....</p>
-        <Link to={title}>Learn More</Link>
-        </article>
-    </section>
+    <div>
+      <h3>{title}</h3>
+      <h4>{bodyData.body}</h4>
+      <button onClick={()=> {
+        navigate('/blogs');
+      }}>Go to blogs page</button>
+    </div>
   )
 }
 

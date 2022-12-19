@@ -2,9 +2,8 @@
   text-align: center;
 }
 
-nav .active {
-  font-size: 20px;
-  color: blue;
+.navStyle {
+  margin: 10px;
 }
 
 
