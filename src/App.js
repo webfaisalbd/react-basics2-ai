@@ -8,6 +8,7 @@ import Blog from './Pages/Blog'
 import About from './Pages/About'
 import Error from './Pages/Error'
 import NavBar from './Components/NavBar'
+import User from './Pages/User'
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
           <Route path='/blogs/:title' element={<Blog />}></Route>
           <Route path='/about' element={<About />}></Route>
           <Route path='*' element={<Error />}></Route>
+          <Route path='/user/' element={<User />}></Route>
         </Routes>
       </BrowserRouter>
     </>

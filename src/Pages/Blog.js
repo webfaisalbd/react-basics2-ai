@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
 
-import { blogsData } from '../data';
+// import { blogsData } from '../data';
 
 const Blog = () => {
   const {title} = useParams();
