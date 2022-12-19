@@ -2,8 +2,23 @@
   text-align: center;
 }
 
-.navStyle {
-  margin: 10px;
+nav {
+  height: 15vh;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navBar {
+  margin: 1rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.navBar:hover {
+  color: green;
 }
 
 
