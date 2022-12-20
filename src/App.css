@@ -3,7 +3,7 @@
 }
 
 nav {
-  height: 15vh;
+  height: 10vh;
   background-color: lightblue;
   display: flex;
   justify-content: center;
@@ -19,6 +19,10 @@ nav {
 
 .navBar:hover {
   color: green;
+}
+
+nav .active {
+  color: blueviolet;
 }
 
 

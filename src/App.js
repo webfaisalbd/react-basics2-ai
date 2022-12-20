@@ -1,10 +1,10 @@
-import './App.css';
-import MemoPage from './MemoPage/MemoPage';
+import React from 'react'
+import RoutesAll from './routesAll/RoutesAll'
 
+import './App.css'
 
 const App = () => {
-
-  return <MemoPage />;
-
+  return <RoutesAll />
 }
+
 export default App
