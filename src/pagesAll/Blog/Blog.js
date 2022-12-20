@@ -1,19 +1,12 @@
-import { Link, useParams } from 'react-router-dom'
-
-import { blogsData } from '../../data';
+import React from 'react'
+import { useLocation } from 'react-router-dom'
 
 const Blog = () => {
-  const { title } = useParams();
-
-  const filteredData = blogsData.filter(blog => blog.title === title);
-  console.log(filteredData[0])
+  const location = useLocation();
   return (
     <div>
-      <h2>{title}</h2>
-
-      <p>{filteredData[0].body}</p>
-
-      <Link to='/blogs'>Go to blogs</Link>
+      <h3>{location.state.title}</h3>
+      <p>{location.state.body}</p>
     </div>
   )
 }

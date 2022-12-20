@@ -15,7 +15,7 @@ const Blogs = () => {
               <h3>{id}</h3>
               <h4>{title}</h4>
               <p>{body.slice(0,100)}...</p>
-              <Link to={title}>More see</Link>
+              <Link to={title} state={{id,title,body}}>More see</Link>
             </article>
           </section>
         })
